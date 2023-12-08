@@ -1,4 +1,10 @@
-# ssh config file
-Host 54.90.35.59
-      PasswordAuthentication no
-      IdentifyFile ~/.ssh/school
+#!/usr/bin/env bash
+# SSH client configuration
+
+Host *
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no    
